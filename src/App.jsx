@@ -1,12 +1,14 @@
 
 import './App.css'
+import Homepage from './pages/Homepage/Homepage'
+
 
 function App() {
 
 
   return (
     <>
-      <h1>Kanban Board</h1>
+      <Homepage />
     </>
   )
 }

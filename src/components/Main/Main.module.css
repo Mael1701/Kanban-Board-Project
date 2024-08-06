@@ -1,0 +1,7 @@
+.main {
+  background-color: #d1d5db;
+  flex-grow: 1;
+  border: 3px solid #60a5fa;
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+}

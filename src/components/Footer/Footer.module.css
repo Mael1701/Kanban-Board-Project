@@ -1,0 +1,25 @@
+.footer {
+  background-color: blue;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a:link,
+.footer a:visited {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: aqua;
+}
+
+.footer i {
+  font-size: 25px;
+}
