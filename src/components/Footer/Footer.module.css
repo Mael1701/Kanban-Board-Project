@@ -1,5 +1,5 @@
 .footer {
-  background-color: blue;
+  background-color: #60a5fa;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@
 
 .footer a:hover,
 .footer a:active {
-  color: aqua;
+  color: #1e293b;
 }
 
 .footer i {

@@ -6,10 +6,10 @@ export default function Sidebar() {
       <nav>
         <ul className={styles.menu}>
           <li>
-            <a href="#"> Home</a>
+            <a href="#"><i className="fa-solid fa-house"></i> Home</a>
           </li>
           <li>
-            <a href="#"> About</a>
+            <a href="#"><i className="fa-solid fa-circle-info"></i> About</a>
           </li>
         </ul>
       </nav>
