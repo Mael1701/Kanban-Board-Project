@@ -1,0 +1,14 @@
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
