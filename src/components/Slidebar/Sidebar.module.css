@@ -30,3 +30,15 @@
   color: #60a5fa;
   cursor: pointer;
 }
+
+a {
+  color: orange;
+}
+
+.active {
+  color: red;
+}
+
+/* a.active {
+  color: #60a5fa;
+} */
