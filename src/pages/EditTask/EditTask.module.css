@@ -1,0 +1,51 @@
+.container {
+  background-color: white;
+  flex-grow: 1;
+  border: 3px solid #60a5fa;
+  border-right: none;
+  border-radius: 15px 15px 15px 15px;
+  margin-right: 5px;
+  padding: 20px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.addTask {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #42597d;
+  margin: 0 20%;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.inputField {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.inputField label {
+  font-size: 24px;
+  color: #fff;
+}
+
+.inputField input {
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.btn {
+  font-size: 22px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #86efac;
+}

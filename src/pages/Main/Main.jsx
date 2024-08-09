@@ -1,12 +1,10 @@
-import KanbanBoard from "../../components/KanbanBoard/KanbanBoard"
-import styles from "./Main.module.css"
+import KanbanBoard from "../../components/KanbanBoard/KanbanBoard";
+import styles from "./Main.module.css";
 
-export default function Main() {
-
-
+export default function Main({ tasks }) {
   return (
     <div className={styles.main}>
-      <KanbanBoard />
+      <KanbanBoard tasks={tasks} />
     </div>
-  )
+  );
 }

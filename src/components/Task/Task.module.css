@@ -37,6 +37,21 @@
   background-color: #fbbf24;
 }
 
-.high{
- background-color: #ef4444;
+.high {
+  background-color: #ef4444;
+}
+
+.editContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.editContainer a {
+  font-size: 18px;
+  padding: 4px 8px;
+  background-color: #86efac;
+  border: 1px solid #333;
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
 }

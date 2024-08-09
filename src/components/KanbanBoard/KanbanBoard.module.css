@@ -1,6 +1,7 @@
 .board {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .board h1 {
@@ -12,4 +13,14 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
+}
+
+.btn {
+  font-size: 22px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #86efac;
 }
