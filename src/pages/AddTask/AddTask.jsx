@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./AddTask.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function AddTask({ addTask, nextId }) {
   const [title, setTitle] = useState("");
@@ -8,6 +8,8 @@ function AddTask({ addTask, nextId }) {
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("");
   const [dueDate, setDueDate] = useState("");
+
+  const navigate = useNavigate();
 
   function submitForm(e) {
     e.preventDefault();
@@ -38,7 +40,8 @@ function AddTask({ addTask, nextId }) {
     setDescription("");
     setPriority("");
     setDueDate("");
-    alert("Your Ticket was successfuly created!");
+
+    navigate("/");
   }
 
   return (

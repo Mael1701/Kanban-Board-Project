@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./EditTask.module.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function EditTask({ tasks, onEditTask }) {
   const currId = useParams().id;
@@ -10,6 +10,8 @@ function EditTask({ tasks, onEditTask }) {
   const [description, setDescription] = useState(task.description);
   const [priority, setPriority] = useState(task.priority);
   const [dueDate, setDueDate] = useState(task.dueDate);
+
+  const navigate = useNavigate();
 
   function submitForm(e) {
     e.preventDefault();
@@ -35,7 +37,7 @@ function EditTask({ tasks, onEditTask }) {
     };
     onEditTask(newTicket);
 
-    alert("Your Ticket was successfuly created!");
+    navigate("/");
   }
 
   return (

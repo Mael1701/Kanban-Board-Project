@@ -6,7 +6,6 @@
 
 .board h1 {
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .list {
@@ -23,4 +22,46 @@
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #86efac;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.priority {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.priority p {
+  font-size: 20px;
+}
+
+.priority button {
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.priority .active {
+  transform: translateY(-10px);
+}
+
+.low {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.medium {
+  background-color: #fbbf24;
+}
+
+.high {
+  background-color: #ef4444;
 }

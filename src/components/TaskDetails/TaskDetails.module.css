@@ -1,9 +1,20 @@
+.main {
+  background-color: white;
+  flex-grow: 1;
+  border: 3px solid #60a5fa;
+  border-right: none;
+  border-radius: 15px 15px 15px 15px;
+  margin-right: 5px;
+  padding: 0 10%;
+}
+
 .task {
   border: 1px solid #333;
   border-radius: 10px;
   margin: 10px 0;
   padding: 5px 10px;
-  color: white;
+  color: #fff;
+  background-color: #42597d;
 }
 
 .task h3 {
@@ -29,18 +40,6 @@
   margin-bottom: 15px;
 }
 
-.low {
-  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
-}
-
-.medium {
-  background-color: #fbbf24;
-}
-
-.high {
-  background-color: #ef4444;
-}
-
 .editContainer {
   display: flex;
   justify-content: center;
@@ -63,11 +62,20 @@
   font-size: 18px;
   padding: 5px 10px;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 
 .btnContainer {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+}
+
+.toBoardBtn {
+  font-size: 22px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #86efac;
 }

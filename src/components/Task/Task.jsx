@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Task.module.css";
 
-export default function Task({ task }) {
+export default function Task({ task, deleteTask }) {
   const {
     id,
     title,
@@ -16,6 +16,9 @@ export default function Task({ task }) {
 
   return (
     <li className={`${styles.task} ${styles[priorityColor]}`}>
+      <button className={styles.btn} onClick={() => deleteTask(id)}>
+        X
+      </button>
       <h3>{title}</h3>
       <p className={styles.description}>{description}</p>
       <p className={styles.assignee}>Assignee: {assignee}</p>
@@ -29,8 +32,13 @@ export default function Task({ task }) {
           <p>{dueDate}</p>
         </div>
       </div>
-      <div className={styles.editContainer}>
-        <Link to={`./editTask/${id}`}>Edit Ticket</Link>
+      <div className={styles.btnContainer}>
+        <div className={styles.editContainer}>
+          <Link to={`/editTask/${id}`}>Edit Ticket</Link>
+        </div>
+        <div className={styles.editContainer}>
+          <Link to={`/taskDetails/${id}`}>Details</Link>
+        </div>
       </div>
     </li>
   );

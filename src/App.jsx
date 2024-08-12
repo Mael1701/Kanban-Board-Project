@@ -10,6 +10,7 @@ import AddTask from "./pages/AddTask/AddTask";
 import data from "./data/kanban.json";
 import { useState } from "react";
 import EditTask from "./pages/EditTask/EditTask";
+import TaskDetails from "./components/TaskDetails/TaskDetals";
 
 function App() {
   const [tasks, setTasks] = useState([...data]);
@@ -28,6 +29,10 @@ function App() {
     });
   }
 
+  function deleteTask(id) {
+    setTasks(tasks.filter((task) => task.id !== id));
+  }
+
   return (
     <>
       <div className="pageContainer">
@@ -35,7 +40,10 @@ function App() {
         <div className="mainContainer">
           <Sidebar />
           <Routes>
-            <Route path="/" element={<Main tasks={tasks} />} />
+            <Route
+              path="/"
+              element={<Main tasks={tasks} deleteTask={deleteTask} />}
+            />
             <Route path="/about" element={<About />} />
             <Route
               path="/addTask"
@@ -44,6 +52,10 @@ function App() {
             <Route
               path="/editTask/:id"
               element={<EditTask onEditTask={editTask} tasks={tasks} />}
+            />
+            <Route
+              path="/taskDetails/:id"
+              element={<TaskDetails tasks={tasks} deleteTask={deleteTask} />}
             />
             <Route path="/*" element={<Error />} />
           </Routes>
