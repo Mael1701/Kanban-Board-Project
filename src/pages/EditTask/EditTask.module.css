@@ -28,16 +28,27 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  border-radius: 5px;
+  font-size: 22px;
+  border: none;
+}
+
+.inputField select, .inputField textarea {
+  font-size: inherit;
+  border-radius: 5px;
 }
 
 .inputField label {
   font-size: 24px;
   color: #fff;
+  border-radius: 5px;
+  width: 150px;
 }
 
 .inputField input {
   font-size: 20px;
   padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .btn {
@@ -48,4 +59,14 @@
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #86efac;
+}
+
+.submit {
+  font-size: 22px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #fbbf24;
 }

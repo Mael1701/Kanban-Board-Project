@@ -99,7 +99,7 @@ function EditTask({ tasks, onEditTask }) {
         </div>
         <div className={styles.inputField}>
           <label htmlFor="description">Description: </label>
-          <textarea
+          <textarea rows={8} cols={30}
             name="description"
             id="description"
             value={description}
@@ -107,7 +107,7 @@ function EditTask({ tasks, onEditTask }) {
             required
           ></textarea>
         </div>
-        <button>Create Ticket</button>
+        <button className={styles.submit}>Edit Ticket</button>
       </form>
     </div>
   );

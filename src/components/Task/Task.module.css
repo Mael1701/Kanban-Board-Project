@@ -59,8 +59,10 @@
 .btn {
   display: block;
   margin-left: auto;
-
-  font-size: 18px;
+  background: transparent;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
   padding: 5px 10px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -68,6 +70,19 @@
 
 .btnContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 20px;
+}
+
+.divButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.divButton select {
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 2.5px 5px;
 }
