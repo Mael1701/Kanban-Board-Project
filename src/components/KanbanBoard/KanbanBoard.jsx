@@ -3,7 +3,7 @@ import List from "../List/List";
 import styles from "./KanbanBoard.module.css";
 import { useState } from "react";
 
-export default function KanbanBoard({ tasks, deleteTask }) {
+export default function KanbanBoard({ tasks, deleteTask, moovingTask }) {
   const [showsLowPriority, setShowLowPriority] = useState(false);
   const [showsMediumPriority, setShowMediumPriority] = useState(false);
   const [showsHighPriority, setShowHighPriority] = useState(false);
@@ -30,6 +30,7 @@ export default function KanbanBoard({ tasks, deleteTask }) {
     (task) => task.status === "In Progress"
   );
   const doneList = filteredTasks.filter((task) => task.status === "Done");
+
 
   return (
     <div className={styles.board}>
@@ -65,13 +66,14 @@ export default function KanbanBoard({ tasks, deleteTask }) {
         </div>
       </div>
       <div className={styles.list}>
-        <List toDos={toDoList} heading="To Do" deleteTask={deleteTask} />
+        <List toDos={toDoList} heading="To Do" deleteTask={deleteTask} moovingTask={moovingTask}/>
         <List
           toDos={inProgressList}
           heading="In Progress"
           deleteTask={deleteTask}
+          moovingTask={moovingTask}
         />
-        <List toDos={doneList} heading="Done" deleteTask={deleteTask} />
+        <List toDos={doneList} heading="Done" deleteTask={deleteTask} moovingTask={moovingTask}/>
       </div>
     </div>
   );

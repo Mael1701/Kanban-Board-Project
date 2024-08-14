@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Task.module.css";
 
-export default function Task({ task, deleteTask }) {
+export default function Task({ task, deleteTask, moovingTask }) {
   const {
     id,
     title,
@@ -14,8 +14,14 @@ export default function Task({ task, deleteTask }) {
   } = task;
   let priorityColor = priority.toLowerCase();
 
+
   return (
     <li className={`${styles.task} ${styles[priorityColor]}`}>
+      <select value={status} onChange={(e) => {moovingTask(id, e.target.value)}}>
+      <option value="To Do">To Do</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Done">Done</option>
+      </select>
       <button className={styles.btn} onClick={() => deleteTask(id)}>
         X
       </button>

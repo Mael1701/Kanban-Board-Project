@@ -33,6 +33,20 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   }
 
+  function moovingTask(id, status) {
+
+    const taskId = tasks.findIndex((el) => el.id === id);
+    const newTasks = tasks.map((task, i) => {
+      if(i !== taskId){
+        return task
+      }
+      task.status = status
+      return task
+    })
+    setTasks(newTasks);
+  }
+
+
   return (
     <>
       <div className="pageContainer">
@@ -42,7 +56,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<Main tasks={tasks} deleteTask={deleteTask} />}
+              element={<Main tasks={tasks} deleteTask={deleteTask} moovingTask={moovingTask} />}
             />
             <Route path="/about" element={<About />} />
             <Route

@@ -1,7 +1,7 @@
 import Task from "../Task/Task";
 import styles from "./List.module.css";
 
-export default function List({ toDos, heading, deleteTask }) {
+export default function List({ toDos, heading, deleteTask, moovingTask }) {
   if (toDos.length === 0) return;
 
   return (
@@ -10,7 +10,7 @@ export default function List({ toDos, heading, deleteTask }) {
       <div>
         <ul>
           {toDos.map((task) => (
-            <Task key={task.id} task={task} deleteTask={deleteTask} />
+            <Task key={task.id} task={task} deleteTask={deleteTask} moovingTask={moovingTask}/>
           ))}
         </ul>
       </div>
