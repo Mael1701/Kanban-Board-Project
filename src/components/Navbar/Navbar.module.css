@@ -1,7 +1,7 @@
 .mainNav {
   display: flex;
   position: relative;
-  background-color:#60a5fa;
+  background-color: rgba(17, 24, 39, 1);
   height: 80px;
   align-items: center;
 }

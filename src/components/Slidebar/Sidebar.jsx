@@ -9,14 +9,14 @@ export default function Sidebar() {
           <li>
             <NavLink  style={({ isActive}) => {
               return {
-                color: isActive ? "#60a5fa" : "",
+                color: isActive ? "#00bfff" : "",
               };
             }} className={styles.active} to="/">Home</NavLink>
           </li>
           <li>
             <NavLink style={({ isActive}) => {
               return {
-                color: isActive ? "#60a5fa" : "",
+                color: isActive ? "#00bfff" : "",
               };
             }} to="/about">About</NavLink>
           </li>

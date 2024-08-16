@@ -46,7 +46,7 @@ function EditTask({ tasks, onEditTask }) {
         <Link className={styles.btn} to="/">
           Go To Your Board
         </Link>
-        <h2>Create a new task for your Kanban board</h2>
+        <h2>Edit the task for your Kanban board</h2>
       </div>
       <form className={styles.addTask} onSubmit={submitForm}>
         <div className={styles.inputField}>
